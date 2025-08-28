@@ -40,10 +40,9 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          with:
-            app_location: "samples/js/browser/quickstart"
-            api_location: ""
-            app_artifact_location: "dist" 
+          app_location: "samples/js/browser/quickstart"
+          api_location: ""
+          app_artifact_location: "dist" 
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
 
@@ -57,4 +56,5 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           action: "close"
+
 
